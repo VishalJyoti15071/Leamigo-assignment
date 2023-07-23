@@ -1,45 +1,25 @@
+import {Switch, Route, Redirect} from 'react-router-dom'
+import Home from './components/Home'
+import Destinations from './components/Destinations'
+import MyBooking from './components/MyBooking'
+import TravelAgency from './components/TravelAgency'
+import HelpCenter from './components/HelpCenter'
+import Login from './components/Login'
+import NotFound from './components/NotFound'
+
 import './App.css'
 
-// These are the lists used in the application. You can move them to any component needed.
-const employmentTypesList = [
-  {
-    label: 'Full Time',
-    employmentTypeId: 'FULLTIME',
-  },
-  {
-    label: 'Part Time',
-    employmentTypeId: 'PARTTIME',
-  },
-  {
-    label: 'Freelance',
-    employmentTypeId: 'FREELANCE',
-  },
-  {
-    label: 'Internship',
-    employmentTypeId: 'INTERNSHIP',
-  },
-]
-
-const salaryRangesList = [
-  {
-    salaryRangeId: '1000000',
-    label: '10 LPA and above',
-  },
-  {
-    salaryRangeId: '2000000',
-    label: '20 LPA and above',
-  },
-  {
-    salaryRangeId: '3000000',
-    label: '30 LPA and above',
-  },
-  {
-    salaryRangeId: '4000000',
-    label: '40 LPA and above',
-  },
-]
-
-// Replace your code here
-const App = () => <div>Hello World</div>
+const App = () => (
+  <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/airports-ports-stations" component={Destinations} />
+    <Route path="/detail" component={MyBooking} />
+    <Route path="/travelAgency" component={TravelAgency} />
+    <Route path="/hc/en-150" component={HelpCenter} />
+    <Route path="/login" component={Login} />
+    <Route path="/not-found" component={NotFound} />
+    <Redirect to="/not-found" />
+  </Switch>
+)
 
 export default App

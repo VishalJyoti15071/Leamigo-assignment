@@ -1,0 +1,9 @@
+.header-container {
+  height: 20vh;
+  width: 100vw;
+  background-color: transparent;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
