@@ -1,9 +1,56 @@
-.header-container {
-  height: 20vh;
+.navbar {
   width: 100vw;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 11vw;
+  padding-left: 10vw;
+}
+.nav-container {
+  width: 100%;
   background-color: transparent;
-  background-size: cover;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.nav-items-container {
+  display: flex;
+  list-style: none;
+  font-family: 'Roboto';
   align-items: center;
+}
+
+.home-website-logo {
+  height: 35px;
+  width: 200px;
+  background-color: transparent;
+}
+.link-item {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 15px;
+  font-weight: 500;
+}
+
+.login-button {
+  color: #ffffff;
+  padding: 7px;
+  background-color: #d6b246;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 8px;
+  border-width: 0px;
+}
+.down-arrow {
+  height: 16px;
+  width: 16px;
+  padding-left: 5px;
+  padding-top: 3px;
+}
+.country-logo {
+  height: 15px;
+  width: 25px;
 }

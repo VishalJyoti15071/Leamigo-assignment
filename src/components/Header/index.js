@@ -1,40 +1,70 @@
-import Link from 'react'
+import {AiFillCaretDown} from 'react-icons/ai'
 import './index.css'
 
 const Header = () => (
-  <div className="header-container">
-    <Link to="/">
-      <img
-        src="https://www.mytransfers.com/app_logos/store.png"
-        alt="mytransport logo"
-        className="logo"
-      />
-    </Link>
-
-    <div className="link-container">
-      <Link to="/airports-ports-stations" className="link-cont">
-        <li>Desinations</li>
-      </Link>
-      <Link to="/detail" className="link-cont">
-        <li>My Booking</li>
-      </Link>
-      <Link to="/travelAgency" className="link-cont">
-        <li>Travel Agencies</li>
-      </Link>
-      <Link to="/hc/en-150" className="link-cont">
-        <li>Help Center</li>
-      </Link>
-      <Link to="/" className="link-cont">
-        <li>Country</li>
-      </Link>
-      <Link to="/" className="link-cont">
-        <li>Currency</li>
-      </Link>
-      <Link to="/login" className="link-cont">
-        <li>Login</li>
-      </Link>
+  <nav className="navbar">
+    <div className="nav-container">
+      <a href="/">
+        <img
+          src="https://d1cj8q6w07zyiq.cloudfront.net/mytransfers/img/mytransfers-logo.png"
+          alt="website logo"
+          className="home-website-logo"
+        />
+      </a>
+      <ul className="nav-items-container">
+        <li>
+          <a href="/airports-ports-stations" className="link-item">
+            Desinations
+          </a>
+        </li>
+        <li>
+          <a href="/detail" className="link-item">
+            My Booking
+          </a>
+        </li>
+        <li>
+          <a href="/travelAgency" className="link-item">
+            Travel Agencies
+            <span>
+              <AiFillCaretDown className="down-arrow" />
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/hc/en-150" className="link-item">
+            Help Center
+          </a>
+        </li>
+        <li>
+          <a href="/" className="link-item">
+            <img
+              src="https://cdn.pixabay.com/photo/2013/07/13/14/17/united-kingdom-162452_640.png"
+              alt="country"
+              className="country-logo"
+            />
+            <span>
+              <AiFillCaretDown className="down-arrow" />
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/" className="link-item">
+            EUR
+            <span>
+              <AiFillCaretDown className="down-arrow" />
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/login">
+            <button type="button" className="login-button">
+              <span>Login</span>
+            </button>
+          </a>
+        </li>
+      </ul>
     </div>
-  </div>
+  </nav>
 )
 
 export default Header
