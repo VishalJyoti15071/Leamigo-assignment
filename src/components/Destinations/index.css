@@ -1,0 +1,27 @@
+.destination {
+  height: 40vh;
+  background-image: url('https://stock.adobe.com/in/search?k=road&asset_id=292571491');
+  background-size: cover;
+}
+.travel-the {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.back-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back {
+  background-color: #fff;
+  color: grey;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+}
+.main-head {
+  font-size: 40px;
+  color: #fff;
+}

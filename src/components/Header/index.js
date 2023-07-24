@@ -20,12 +20,12 @@ const Header = () => (
           </a>
         </li>
         <li>
-          <a href="/detail" className="link-item">
+          <a href="/" className="link-item">
             My Booking
           </a>
         </li>
         <li>
-          <a href="/travelAgency" className="link-item">
+          <a href="/" className="link-item">
             Travel Agencies
             <span>
               <AiFillCaretDown className="down-arrow" />
@@ -33,7 +33,7 @@ const Header = () => (
           </a>
         </li>
         <li>
-          <a href="/hc/en-150" className="link-item">
+          <a href="/" className="link-item">
             Help Center
           </a>
         </li>
@@ -58,7 +58,7 @@ const Header = () => (
           </a>
         </li>
         <li>
-          <a href="/login">
+          <a href="/">
             <button type="button" className="login-button">
               <BsPersonFill className="login-person" />
               <span>Login</span>
