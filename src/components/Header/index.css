@@ -1,9 +1,7 @@
 .navbar {
-  width: 100vw;
+  width: 100%;
   padding-top: 20px;
   padding-bottom: 15px;
-  padding-right: 11vw;
-  padding-left: 10vw;
 }
 .nav-container {
   width: 100%;
@@ -16,13 +14,15 @@
   display: flex;
   list-style: none;
   font-family: 'Roboto';
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 6px;
 }
 
 .home-website-logo {
-  height: 35px;
+  height: 50px;
   width: 200px;
   background-color: transparent;
+  margin-top: 0px;
 }
 .link-item {
   color: #ffffff;
@@ -53,4 +53,9 @@
 .country-logo {
   height: 15px;
   width: 25px;
+}
+
+.login-person {
+  padding-top: 2px;
+  padding-right: 2px;
 }

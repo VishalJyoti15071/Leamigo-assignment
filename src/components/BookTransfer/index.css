@@ -1,0 +1,73 @@
+.book-travel-container {
+  height: 85vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-container {
+  width: 70%;
+  align-self: center;
+  margin: 20px;
+  margin-top: 50px;
+}
+.book-heading {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+}
+.description-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #f5f6f7;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.unordered-list-book {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.ordered-list-book {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.carLogo {
+  height: 70px;
+  width: 70px;
+  border-radius: 35px;
+  border: 1px solid black;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.description-rat {
+  text-align: center;
+}
+.full-image-container {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  padding-right: 0px;
+}
+.image1 {
+  width: 50%;
+  height: 120px;
+}
+.para {
+  width: 50%;
+  height: 120px;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+}

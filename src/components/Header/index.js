@@ -1,4 +1,6 @@
 import {AiFillCaretDown} from 'react-icons/ai'
+import {BsPersonFill} from 'react-icons/bs'
+import websiteLogo from './assets/websiteLogo.png'
 import './index.css'
 
 const Header = () => (
@@ -6,7 +8,7 @@ const Header = () => (
     <div className="nav-container">
       <a href="/">
         <img
-          src="https://d1cj8q6w07zyiq.cloudfront.net/mytransfers/img/mytransfers-logo.png"
+          src={websiteLogo}
           alt="website logo"
           className="home-website-logo"
         />
@@ -58,6 +60,7 @@ const Header = () => (
         <li>
           <a href="/login">
             <button type="button" className="login-button">
+              <BsPersonFill className="login-person" />
               <span>Login</span>
             </button>
           </a>

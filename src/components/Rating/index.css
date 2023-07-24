@@ -1,0 +1,71 @@
+.rating-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 11vw;
+  padding-left: 10vw;
+  padding-top: 50px;
+}
+.rating-heading {
+  padding: 20px;
+  align-self: center;
+}
+.name-rat {
+  font-size: 14px;
+  font-weight: 600;
+}
+.unordered-list-rat {
+  width: 100%;
+  flex-wrap: wrap;
+  list-style: none;
+  font-weight: 400;
+  color: #212529;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.ordered-list-rat {
+  width: 32%;
+  background-color: #f5f6f7;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+}
+.description-rat {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #212529;
+}
+.icon-solid {
+  color: #efa728;
+  font-size: 16px;
+  position: relative;
+  top: 9px;
+  margin-top: 0px;
+}
+.icon-blank {
+  color: #a7a7a7;
+  font-size: 16px;
+  position: relative;
+  top: 9px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.star-name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.marker-stars-cont {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px;
+}
