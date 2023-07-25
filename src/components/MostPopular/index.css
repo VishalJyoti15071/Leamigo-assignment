@@ -1,0 +1,27 @@
+.most-popular-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.popular-heading {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.destination-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.destination-card {
+  color: rgb(61, 64, 67);
+  width: 33%;
+  font-size: 14px;
+  padding-bottom: 8px;
+}

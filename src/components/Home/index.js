@@ -9,6 +9,7 @@ import Header from '../Header'
 import Rating from '../Rating'
 import BookTransfer from '../BookTransfer'
 import MostPopular from '../MostPopular'
+import DidYou from '../DidYou'
 
 class Home extends Component {
   state = {isOneway: true, userInputFrom: '', userInputTo: '', isBlur: false}
@@ -109,6 +110,7 @@ class Home extends Component {
         <Rating />
         <BookTransfer />
         <MostPopular />
+        <DidYou />
         <div className="heading-container1">
           <h1 className="book-heading1">
             Maximum comfort and safety during your trip

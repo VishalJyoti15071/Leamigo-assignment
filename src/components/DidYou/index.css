@@ -1,0 +1,30 @@
+.did-you-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #f5f6f7;
+  color: rgb(37, 41, 44);
+}
+.did-you-heading {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  padding: 10px;
+}
+.unordered-did-you {
+  font-size: 14px;
+  color: rgb(65, 70, 74);
+  list-style: none;
+}
+.order-did-you {
+  padding-bottom: 20px;
+}
+.order-did-you:before {
+  content: '✓';
+  color: green;
+  padding-right: 5px;
+}
