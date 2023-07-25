@@ -1,7 +1,14 @@
 .destination {
-  height: 40vh;
-  background-image: url('https://stock.adobe.com/in/search?k=road&asset_id=292571491');
+  height: 70vh;
+  width: 100vw;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDDR1MNnlizXe0uJBnJtLgmpFji4_GyfvkMDZjwWPbCZo7SYg2Qc0jqpFeN8vEmYBmsF4&usqp=CAU');
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 11vw;
+  padding-left: 10vw;
 }
 .travel-the {
   width: 70%;
@@ -10,18 +17,34 @@
   align-items: center;
 }
 .back-cont {
+  height: 32px;
+  width: 140px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: #fff;
+  border: none;
+  border-radius: 16px;
 }
 .back {
-  background-color: #fff;
-  color: grey;
-  height: 30px;
-  width: 100px;
-  text-align: center;
+  color: black;
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  padding-left: 40px;
 }
 .main-head {
   font-size: 40px;
   color: #fff;
+}
+.back-arrow {
+  background-color: black;
+  color: #fff;
+  height: 32px;
+  width: 32px;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 16px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin-top: 2px;
 }

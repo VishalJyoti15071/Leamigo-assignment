@@ -7,8 +7,9 @@ const BookTransfer = () => (
   <div className="book-travel-container">
     <div className="heading-container">
       <h1 className="book-heading">
-        Book your transfer to the Airport or your private ride with ease. Enjoy
-        our service at best rates available.
+        Book your <span className="highlight">transfer</span> to the{' '}
+        <span className="highlight">Airport</span> or your private ride with
+        ease. Enjoy our service at best rates available.
       </h1>
     </div>
     <div className="description-container">
@@ -23,6 +24,9 @@ const BookTransfer = () => (
         <li className="ordered-list-book">
           <FaShuttleVan className="carLogo" />
           <p className="name-rat">PRIVATE TRANSFERS</p>
+          <p className="description-rat">
+            We offer only private transfers, no shared service
+          </p>
         </li>
         <li className="ordered-list-book">
           <CgProfile className="carLogo" />

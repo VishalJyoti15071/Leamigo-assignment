@@ -43,6 +43,7 @@
   font-size: 14px;
   border-radius: 8px;
   border-width: 0px;
+  cursor: pointer;
 }
 .down-arrow {
   height: 16px;

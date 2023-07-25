@@ -8,6 +8,7 @@ import './index.css'
 import Header from '../Header'
 import Rating from '../Rating'
 import BookTransfer from '../BookTransfer'
+import MostPopular from '../MostPopular'
 
 class Home extends Component {
   state = {isOneway: true, userInputFrom: '', userInputTo: '', isBlur: false}
@@ -107,7 +108,7 @@ class Home extends Component {
         </div>
         <Rating />
         <BookTransfer />
-
+        <MostPopular />
         <div className="heading-container1">
           <h1 className="book-heading1">
             Maximum comfort and safety during your trip

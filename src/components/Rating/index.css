@@ -9,6 +9,7 @@
   padding-top: 50px;
 }
 .rating-heading {
+  font-size: 25px;
   padding: 20px;
   align-self: center;
 }
@@ -27,17 +28,16 @@
   justify-content: space-between;
 }
 .ordered-list-rat {
-  width: 32%;
+  width: 309px;
   background-color: #f5f6f7;
   margin-right: 10px;
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 15px;
-  border: none;
-  border-radius: 10px;
 }
-.description-rat {
+.description-rating {
   margin-top: 10px;
   font-size: 12px;
   font-weight: 400;
@@ -45,23 +45,23 @@
 }
 .icon-solid {
   color: #efa728;
-  font-size: 16px;
+  font-size: 12px;
   position: relative;
-  top: 9px;
+  padding-top: 0px;
   margin-top: 0px;
 }
 .icon-blank {
   color: #a7a7a7;
-  font-size: 16px;
+  font-size: 12px;
   position: relative;
-  top: 9px;
   margin-top: 0px;
   padding-top: 0px;
 }
-.star-name-container {
+.star-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .marker-stars-cont {
   display: flex;

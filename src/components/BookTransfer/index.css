@@ -1,18 +1,20 @@
 .book-travel-container {
-  height: 85vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .heading-container {
-  width: 70%;
+  width: 75%;
   align-self: center;
   margin: 20px;
-  margin-top: 50px;
+}
+.highlight {
+  color: rgb(63, 154, 63);
 }
 .book-heading {
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   font-weight: 400;
 }
@@ -23,38 +25,44 @@
   margin-top: 20px;
   background-color: #f5f6f7;
   padding-top: 30px;
-  padding-bottom: 50px;
 }
 .unordered-list-book {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 120px;
+  padding-right: 120px;
 }
 .ordered-list-book {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 20%;
+  width: 25%;
+  margin-top: 10px;
 }
 .carLogo {
-  height: 70px;
-  width: 70px;
-  border-radius: 35px;
+  height: 65px;
+  width: 65px;
+  border-radius: 33px;
   border: 1px solid black;
-  padding: 15px;
-  margin-bottom: 10px;
+  padding: 10px;
+}
+.name-rat {
+  font-size: 13px;
+  margin: 12px;
+  font-weight: bold;
 }
 .description-rat {
   text-align: center;
+  font-size: 12px;
+  color: rgb(80, 88, 95);
 }
 .full-image-container {
   width: 100%;
   display: flex;
-  margin-top: 30px;
+  margin-top: 50px;
   padding-right: 0px;
 }
 .image1 {
@@ -70,4 +78,6 @@
   justify-content: center;
   align-items: center;
   text-align: right;
+  padding-right: 15%;
+  font-weight: bold;
 }
