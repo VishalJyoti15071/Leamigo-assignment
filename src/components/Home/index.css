@@ -88,8 +88,9 @@
   border-radius: 10px;
   color: #fff !important;
   transition: all 0.2s linear;
-  height: 100%;
+  height: 100px;
   width: 130px;
+  cursor: pointer;
 }
 .input-text {
   font-size: 14px;
@@ -164,7 +165,7 @@
   border: none;
   border-radius: 10px;
   transition: all 0.2s linear;
-  height: 100%;
+  height: 100px;
   width: 130px;
   background-color: #fff;
   padding: 10px;

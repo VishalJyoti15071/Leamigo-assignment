@@ -14,14 +14,57 @@ import ComfortAndSafety from '../ComfortAndSafety'
 import BottomDescription from '../BottomDescription'
 
 class Home extends Component {
-  state = {isOneway: true, userInputFrom: '', userInputTo: '', isBlur: false}
+  state = {
+    isOneway: true,
+    userInputFrom: '',
+    userInputFromDate: 'Fri, Apr 26',
+    userInputTo: '',
+    userInputToDate: '',
+    isBlur: false,
+  }
 
   setTrip = () => {
     this.setState(prevState => ({isOneway: !prevState.isOneway}))
   }
 
+  onSubmitButton = event => {
+    event.preventDefault()
+  }
+
+  onChangeFrom = event => {
+    this.setState({userInputFrom: event.target.value})
+  }
+
+  onChangeTo = event => {
+    this.setState({userInputTo: event.target.value})
+  }
+
+  onChangeFromDate = event => {
+    const {isOneway, userInputFromDate, userInputToDate} = this.state
+    if (isOneway === true) {
+      this.setState({userInputFromDate: event.target.value})
+    } else {
+      this.setState({
+        userInputFromDate: event.target.value,
+        userInputToDate: event.target.value.toLocaleDateString(),
+      })
+      console.log(userInputToDate)
+    }
+  }
+
+  onChangeToDate = event => {
+    this.setState({userInputToDate: event.target.value})
+  }
+
   render() {
-    const {isOneway, userInputFrom, userInputTo, isBlur} = this.state
+    const {
+      isOneway,
+      userInputFrom,
+      userInputFromDate,
+      userInputToDate,
+      userInputTo,
+      isBlur,
+    } = this.state
     return (
       <div className="container">
         <div className="main-container">
@@ -60,8 +103,9 @@ class Home extends Component {
                 <div className="search-date">
                   <input
                     type="date"
-                    value="Fri, Apr 26"
+                    value={userInputFromDate}
                     className="date-cont"
+                    onChange={this.onChangeFromDate}
                   />
                   <div className="from-time">
                     <AiFillClockCircle /> 23:30
@@ -88,8 +132,9 @@ class Home extends Component {
                 <div className="search-date">
                   <input
                     type="date"
-                    value="Fri, Apr 26"
+                    value={userInputToDate}
                     className="date-cont"
+                    onChange={this.onChangeToDate}
                   />
                   <div className="from-time">
                     <AiFillClockCircle /> 23:30
