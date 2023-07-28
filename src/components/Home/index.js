@@ -21,6 +21,9 @@ class Home extends Component {
     userInputTo: '',
     userInputToDate: '',
     isBlur: false,
+    adult: 1,
+    children: 0,
+    infants: 1,
   }
 
   setTrip = () => {
@@ -46,9 +49,10 @@ class Home extends Component {
     } else {
       this.setState({
         userInputFromDate: event.target.value,
-        userInputToDate: event.target.value.toLocaleDateString(),
+        userInputToDate: event.target.value,
       })
-      console.log(userInputToDate)
+      const date = userInputFromDate.getDate()
+      console.log(date)
     }
   }
 
@@ -64,6 +68,9 @@ class Home extends Component {
       userInputToDate,
       userInputTo,
       isBlur,
+      adult,
+      children,
+      infants,
     } = this.state
     return (
       <div className="container">
@@ -103,7 +110,7 @@ class Home extends Component {
                 <div className="search-date">
                   <input
                     type="date"
-                    value={userInputFromDate}
+                    value="{userInputFromDate}"
                     className="date-cont"
                     onChange={this.onChangeFromDate}
                   />
@@ -144,9 +151,44 @@ class Home extends Component {
               <div className="third-input-container">
                 <div className="number-of-Pass">
                   <MdPeople />
-                  <span>1 Adult</span>
+                  <span className="passenger">
+                    {`${adult} Adult ${children} Children ${infants} Infants 1
+                    Adult 1 Childern 1 Infants`}
+                  </span>
                 </div>
                 <AiFillCaretDown className="down-arrow" />
+                <div className="passenger-container">
+                  <span>Adult </span>
+                  <div className="sign-container">
+                    <button className="button-adult" type="button">
+                      -
+                    </button>
+                    <span> {adult} </span>
+                    <button className="button-adult" type="button">
+                      +
+                    </button>
+                  </div>
+                  <span>Childrens </span>
+                  <div className="sign-container">
+                    <button className="button-adult" type="button">
+                      -
+                    </button>
+                    <span> {children} </span>
+                    <button className="button-adult" type="button">
+                      +
+                    </button>
+                  </div>
+                  <span>Infants </span>
+                  <div className="sign-container">
+                    <button className="button-adult" type="button">
+                      -
+                    </button>
+                    <span> {infants} </span>
+                    <button className="button-adult" type="button">
+                      +
+                    </button>
+                  </div>
+                </div>
               </div>
               <button className="search-button" type="submit">
                 Search

@@ -135,6 +135,15 @@
   margin-top: 10px;
   cursor: pointer;
 }
+.number-of-Pass {
+  display: flex;
+  overflow: hidden;
+}
+
+.passenger {
+  width: 50px;
+  margin-left: 10px;
+}
 
 .alert-para {
   width: 100%;
@@ -148,7 +157,7 @@
 }
 .from-time {
   height: 40px;
-  width: 8vw;
+  width: 9vw;
   background-color: #fff;
   padding: 10px;
   border: none;
@@ -179,4 +188,30 @@
   align-items: center;
   margin-left: 15px;
   margin-right: 30px;
+}
+.passenger-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  margin-top: 320px;
+  border-radius: 5px;
+  width: 130px;
+  margin-left: -10px;
+  padding: 10px;
+  outline: 1px solid gray;
+}
+.sign-container {
+  display: flex;
+  border: 1px solid gray;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+}
+.button-adult {
+  padding: 5px;
+  color: #0c8450;
+  font-size: 15px;
 }
