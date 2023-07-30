@@ -24,13 +24,14 @@ class Home extends Component {
     adult: 1,
     children: 0,
     infants: 1,
+    isAddShow: false,
   }
 
   setTrip = () => {
     this.setState(prevState => ({isOneway: !prevState.isOneway}))
   }
 
-  onSubmitButton = event => {
+  onSubmitButton = async event => {
     event.preventDefault()
   }
 
@@ -56,8 +57,45 @@ class Home extends Component {
     }
   }
 
+  onClickAddPassenger = () => {
+    this.setState(prevState => ({isAddShow: !prevState.isAddShow}))
+  }
+
   onChangeToDate = event => {
     this.setState({userInputToDate: event.target.value})
+  }
+
+  onClickNegativeA = () => {
+    const {adult} = this.state
+    if (adult > 0) {
+      this.setState(prevState => ({adult: prevState.adult - 1}))
+    }
+  }
+
+  onClickNegativeC = () => {
+    const {children} = this.state
+    if (children > 0) {
+      this.setState(prevState => ({children: prevState.children - 1}))
+    }
+  }
+
+  onClickNegativeI = () => {
+    const {infants} = this.state
+    if (infants > 0) {
+      this.setState(prevState => ({infants: prevState.infants - 1}))
+    }
+  }
+
+  onClickPositiveA = () => {
+    this.setState(prevState => ({adult: prevState.adult + 1}))
+  }
+
+  onClickPositiveC = () => {
+    this.setState(prevState => ({children: prevState.children + 1}))
+  }
+
+  onClickPositiveI = () => {
+    this.setState(prevState => ({infants: prevState.infants + 1}))
   }
 
   render() {
@@ -71,6 +109,7 @@ class Home extends Component {
       adult,
       children,
       infants,
+      isAddShow,
     } = this.state
     return (
       <div className="container">
@@ -110,7 +149,7 @@ class Home extends Component {
                 <div className="search-date">
                   <input
                     type="date"
-                    value="{userInputFromDate}"
+                    value={userInputFromDate}
                     className="date-cont"
                     onChange={this.onChangeFromDate}
                   />
@@ -149,46 +188,78 @@ class Home extends Component {
                 </div>
               </div>
               <div className="third-input-container">
-                <div className="number-of-Pass">
-                  <MdPeople />
-                  <span className="passenger">
-                    {`${adult} Adult ${children} Children ${infants} Infants 1
+                <button
+                  type="button"
+                  className="number-of-Pass"
+                  onClick={this.onClickAddPassenger}
+                >
+                  <div className="logo-and-passenger">
+                    <MdPeople />
+                    <span className="passenger">
+                      {`${adult} Adult ${children} Children ${infants} Infants 1
                     Adult 1 Childern 1 Infants`}
-                  </span>
-                </div>
-                <AiFillCaretDown className="down-arrow" />
-                <div className="passenger-container">
-                  <span>Adult </span>
-                  <div className="sign-container">
-                    <button className="button-adult" type="button">
-                      -
-                    </button>
-                    <span> {adult} </span>
-                    <button className="button-adult" type="button">
-                      +
-                    </button>
+                    </span>
                   </div>
-                  <span>Childrens </span>
-                  <div className="sign-container">
-                    <button className="button-adult" type="button">
-                      -
-                    </button>
-                    <span> {children} </span>
-                    <button className="button-adult" type="button">
-                      +
-                    </button>
+                  <AiFillCaretDown className="down-arrow" />
+                </button>
+                {isAddShow && (
+                  <div className="passenger-container">
+                    <span>Adults </span>
+                    <div className="sign-container">
+                      <button
+                        className="button-adult"
+                        type="button"
+                        onClick={this.onClickNegativeA}
+                      >
+                        -
+                      </button>
+                      <span> {adult} </span>
+                      <button
+                        onClick={this.onClickPositiveA}
+                        className="button-adult"
+                        type="button"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <span>Childrens </span>
+                    <div className="sign-container">
+                      <button
+                        onClick={this.onClickNegativeC}
+                        className="button-adult"
+                        type="button"
+                      >
+                        -
+                      </button>
+                      <span> {children} </span>
+                      <button
+                        onClick={this.onClickPositiveC}
+                        className="button-adult"
+                        type="button"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <span>Infants </span>
+                    <div className="sign-container">
+                      <button
+                        onClick={this.onClickNegativeI}
+                        className="button-adult"
+                        type="button"
+                      >
+                        -
+                      </button>
+                      <span> {infants} </span>
+                      <button
+                        onClick={this.onClickPositiveI}
+                        className="button-adult"
+                        type="button"
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
-                  <span>Infants </span>
-                  <div className="sign-container">
-                    <button className="button-adult" type="button">
-                      -
-                    </button>
-                    <span> {infants} </span>
-                    <button className="button-adult" type="button">
-                      +
-                    </button>
-                  </div>
-                </div>
+                )}
               </div>
               <button className="search-button" type="submit">
                 Search
